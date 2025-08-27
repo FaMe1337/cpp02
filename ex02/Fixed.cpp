@@ -84,7 +84,7 @@ Fixed Fixed::operator/(const Fixed& other) const
 {
 	Fixed temp;
 
-	temp.setRawBits(getRawBits() / other.getRawBits());
+	temp.setRawBits((getRawBits() *(1 <<_literal)) / other.getRawBits());
 	return temp;
 }
 
